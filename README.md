@@ -8,7 +8,7 @@ Party Acceleration is a 256 byte intro released at [Deadline 2024](https://www.d
 
 The main idea is just to reuse the sound function as data for the visuals, and doing so should also give some nice sync. A waveform display basically. The sound is a kick alternating with a 8th bass note, with a [fake filter](https://github.com/teadrinker/bytebeat-notes?tab=readme-ov-file#approximated-filtered-sawtooth). The time is warped ([like this](https://madtealab.com/#V=1&F=1&G=1&GX=40&GY=19&GS=0.045&f1=x+%3E+16+%3F+x+-+8+%2B+pow%282%2C+x-34%29+%3A+x+%2A+x+%2F+32)), initially the speed is increasing, then linear for a while, resembling normal music, and then finally the speed increases exponentially. The loss of float32 precision as the numbers get high creates some nice visual patterns at the end. However relying on this is a bit brittle, on my machine the sound stops when the visuals end, however on other systems the sound continue it seems...
 
-I made 13 versions of this, the hardest part was trying to make the sound not too agressive as it's passing the ears sensitive range when pitching up.
+I made 13 versions of this, the hardest part was trying to make the sound not too agressive as it's passing the ears sensitive range when pitching up. The noisy ending is still very harsh though...
 
 ## Interactive Programming
 
